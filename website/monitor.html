@@ -1,0 +1,54 @@
+<html>
+<head>
+<title> Monitor </title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script type = "text/javascript">
+function myAjax7 () {
+$.ajax( { type : 'POST',
+          data : { },
+          url  : 'temp.php',              // <=== CALL THE PHP FUNCTION HERE.
+          success: function ( data ) {
+            alert( data );               // <=== VALUE RETURNED FROM FUNCTION.
+          },
+          error: function ( xhr ) {
+            alert( "error" );
+          }
+        });
+}
+
+function myAjax8 () {
+$.ajax( { type : 'POST',
+          data : { },
+          url  : 'humidity.php',              // <=== CALL THE PHP FUNCTION HERE.
+          success: function ( data ) {
+            alert( data );               // <=== VALUE RETURNED FROM FUNCTION.
+          },
+          error: function ( xhr ) {
+            alert( "error" );
+          }
+        });
+}
+
+
+
+    </script>
+</head>
+<body>
+<h1><b> Monitoring Switches: </b></h1>
+<br>
+<h3> Temperature:  <h3>
+<button type="button" name="temp" value="temp" onclick="myAjax7()"> Temp. </button> 
+
+<br>
+<br>
+<h3> Humidity:  <h3>
+<button type="button" name="humidity" value="humidity" onclick="myAjax8()"> Humidity </button>
+<br>
+<br>
+To go to control switches click <a href="onoff.html">here</a>
+
+
+
+
+</body>
+</html>
